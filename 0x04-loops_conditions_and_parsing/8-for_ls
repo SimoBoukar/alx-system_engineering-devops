@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #For ls
 
-current_dir=$(pwd)
-
-for file in $(ls -1)
+list=$(ls -1)
+for i in $list
 do
-	name=$(echo "$file" | cut -d'-' -f2-)
+	name=$(echo "$i" | cut -d'-' -f2-)
 	echo "$name"
 done
