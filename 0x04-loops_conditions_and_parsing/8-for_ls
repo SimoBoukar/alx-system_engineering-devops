@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#For ls
+
+current_dir=$(pwd)
+
+ls -1 | while read file; do
+	name=$(echo "$file" | cut -d'-' -f2-)
+	echo "$name"
+done
