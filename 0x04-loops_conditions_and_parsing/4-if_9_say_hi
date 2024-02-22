@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#If 9, say Hi!
+
+counter=0
+until [ $counter -ge 10 ]
+do
+    if [ $counter -eq 8 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    counter=$((counter + 1))
+done
