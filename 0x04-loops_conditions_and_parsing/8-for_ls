@@ -3,7 +3,8 @@
 
 current_dir=$(pwd)
 
-ls -1 | while read file; do
+for file in $(ls -1)
+do
 	name=$(echo "$file" | cut -d'-' -f2-)
 	echo "$name"
 done
