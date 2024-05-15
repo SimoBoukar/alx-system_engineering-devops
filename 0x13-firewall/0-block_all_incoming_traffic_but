@@ -1,13 +1,11 @@
-sudo sed "s/IPV6=no/IPV6=yes/" /etc/default/ufw
+#!/usr/bin/anv bash
+# Configure ufw so that it blocks all incoming traffic, except the following TCP ports
 
-sudo ufw default deny incoming
-
+sudo apt install ufw
+sudo ufw default deny uncoming
 sudo ufw default allow outgoing
-
-sudo ufw allow OpenSSH
-sudo ufw allow 22
-sudo ufw allow 443
-sudo ufw allow 80
-sudo ufw allow ‘Nginx Full’
-
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
 sudo ufw enable
+sudo ufw status verbose
